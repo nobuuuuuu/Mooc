@@ -12,7 +12,7 @@ categories: jekyll update
 
 ### [I. Introduction to React](#introduction-to-react)
 
-#### [a. What is React js?](#a.-what-is-react-js?)
+#### [What is React js](#what-is-react-js)
 
 #### b. Why you would learn react js?
 
@@ -68,7 +68,7 @@ categories: jekyll update
 
 ## I. Introduction to React
 
-### a. What is React js?
+### What is React js
 
 ![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
 
