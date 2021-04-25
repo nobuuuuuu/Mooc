@@ -11,7 +11,7 @@ categories: moocs
 ## Table of Contents
 
 * [I. Introduction to React](#introduction-to-react)
-- [a. What is React js](#what-is-react-js)
+** [a. What is React js](#what-is-react-js)
 * [b. Why you would learn react js](#why-you-would-learn-react-js)
 * [c. Educational objective and prerequisites](#educational-objective-and-prerequisites)
 * [d. Mooc summarize](#mooc-summarize)
