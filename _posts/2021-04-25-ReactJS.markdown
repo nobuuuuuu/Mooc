@@ -10,9 +10,9 @@ categories: jekyll update
 
 ## Plan and details
 
-### I. Introduction to React
+### [I. Introduction to React](#introduction-to-react)
 
-#### a. What is React js?
+#### [a. What is React js?](#a.-what-is-react-js?)
 
 #### b. Why you would learn react js?
 
@@ -128,6 +128,8 @@ Then run this command to install Axios:
 ```bash
 npm install axios
 ```
+
+# Chapter 1
 
 Then you will need to import Axios to the file where you want to use it.
 
