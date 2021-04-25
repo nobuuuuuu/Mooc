@@ -11,7 +11,7 @@ categories: moocs
 ## Table of Contents
 
 * [I. Introduction to React](#introduction-to-react)
-* [a. What is React js](#what-is-react-js)
+- [a. What is React js](#what-is-react-js)
 * [b. Why you would learn react js](#why-you-would-learn-react-js)
 * [c. Educational objective and prerequisites](#educational-objective-and-prerequisites)
 * [d. Mooc summarize](#mooc-summarize)
@@ -38,6 +38,7 @@ categories: moocs
 * [c. Calling the API](#calling-the-api)
 * [d. RESTful API advantages](#restful-api-advantages)
 * [e. Exercise](#exercise)
+* [f. Quiz](#final-quiz)
 
 ---
 
@@ -54,7 +55,7 @@ All the tutorials will be offered in a GIT and Code Sand Box format so that you 
 
 If you prefer to use a local tool on your computer, the recommended editors are Visual Studio Code, Notepad ++ or Sublime Text.
 
-### a. What is React js?
+### What is React js?
 
 ![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
 
