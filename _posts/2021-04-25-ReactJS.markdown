@@ -32,23 +32,35 @@ categories: moocs
 * [d. Set up a local state](#set-up-a-local-state)
 * [e. Update the local state with setState](#update-the-local-state-with-setstate)
 * [f. Exercise Build a calculator](#exercise-build-a-calculator)
-* [V. React and RESTful API](#v.-react-and-restful-api)
-* [a. What a RESTful API is ?](#what-a-resftul-api-is)
-* [b. Setup the project](#setup-the-projet)
+* [V. React and RESTful API](#react-and-restful-api)
+* [a. What a RESTful API is ?](#what-a-restftul-api-is)
+* [b. Setup the project](#setup-the-project)
 * [c. Calling the API](#calling-the-api)
-* [d. Manipulate the API return](#manipulate-the-api-return)
+* [d. RESTful API advantages](#restful-api-advantages)
+* [e. Exercise](#exercise)
 
 ---
 
 ### Introduction to React
 
-#### What is React js
+Our mooc subject is learning to use React js.  
+React js is an open-source, front end, JavaScript library for building user interfaces or UI components
+
+Through this course, you will have the opportunity to use React JS to create frontend web applications.
+Various exercises will be proposed to you in order to evaluate your progress.
+Most of the training will be practical, there will of course be theory, but we believe that learning by doing is much more effective and it will also allow you to quickly grasp the techniques used in the professional world.
+
+All the tutorials will be offered in a GIT and Code Sand Box format so that you can easily retrieve the code and implement it yourself without the need to install a specific IDE.
+
+If you prefer to use a local tool on your computer, the recommended editors are Visual Studio Code, Notepad ++ or Sublime Text.
+
+### a. What is React js?
 
 ![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
 
-### V. React and RESTful API
+### React and RESTful API
 
-This part is a plus and will help you to optimize your application and the possibility to add more. The RESTful API is use by lot of application because this method proposes different advantages. But which advantages can we get with the RESTful API? First of all, we can see what a RESTful API is. 
+This part is a plus and will help you to optimize your application and the possibility to add more. The RESTful API is use by lot of application because this method proposes different advantages. But which advantages can we get with the RESTful API? First of all, we can see what a RESTful API is.
 
 #### What a RESTful API is
 
@@ -81,12 +93,12 @@ On-demand code (optional), i.e. the ability to send executable code from the ser
 Although the REST API must meet all of these criteria, it is considered to be easier to use than a protocol such as SOAP (Simple Object Access Protocol), which is subject to specific constraints including XML messaging. , integrated security and transaction compliance, which makes it heavier and slower.
 
 
-#### b. Setup the project
+#### Setup the project
 
 ##### Preconditions:
- * Node.js version 10.16.0 installed on your computer. To install it on macOS or Ubuntu 18.04, follow the steps of the tutorial How to install Node.js and create a local development environment on macOS or the * Installation using a PPA * section of the tutorial How to install Node.js on Ubuntu 18.04.
- * A new React project set up with Create React App by following the tutorial How to set up a React project with Create React App.
- * It will also be helpful to have a basic understanding of JavaScript, which you can find in the How to Code in JavaScript series, as well as a basic knowledge of HTML and CSS.
+* Node.js version 10.16.0 installed on your computer. To install it on macOS or Ubuntu 18.04, follow the steps of the tutorial How to install Node.js and create a local development environment on macOS or the * Installation using a PPA * section of the tutorial How to install Node.js on Ubuntu 18.04.
+* A new React project set up with Create React App by following the tutorial How to set up a React project with Create React App.
+* It will also be helpful to have a basic understanding of JavaScript, which you can find in the How to Code in JavaScript series, as well as a basic knowledge of HTML and CSS.
 
 ###### Step 1:
 In this section, you will add Axios to the React digital-ocean-tutorial project that you created by following the How to set up a React project with Create React App tutorial.
@@ -107,7 +119,9 @@ npm install axios
 
 Then you will need to import Axios to the file where you want to use it.
 
-###### Step 2: Build the GET request
+#### Calling the API
+
+##### Build the GET request
 
 In this example, you create a new component and import Axios into it to send a GET request.
 
@@ -147,13 +161,119 @@ export default class PersonList extends React.Component {
 }
 ```
 
+First, you import React and Axios so that both can be used in the component. Then you plug into the componentDidMount lifecycle hook and make a GET request.
+
+You use axios.get (url) with a URL from an API endpoint to get a promise that returns a response object. Inside the response object is data that is assigned the value person.
+
+You can also get other information about the request, such as the status code under res.status or more information inside res.request.
 
 
-#### c. Calling the API
 
-#### d. Manipulate the API return 
+##### Build the POST request
+In this step, you will be using Axios with another HTTP request method called POST.
 
-#### d. RESTful API advantages
+Remove the previous code in PersonList and add the following to create a form that allows the user to enter data and then POST the content to an API:
+
+```js
+import React from 'react';
+import axios from 'axios';
+
+export default class PersonList extends React.Component {
+  state = {
+    name: '',
+  }
+
+  handleChange = event => {
+    this.setState({ name: event.target.value });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const user = {
+      name: this.state.name
+    };
+
+    axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  }
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Person Name:
+            <input type="text" name="name" onChange={this.handleChange} />
+          </label>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    )
+  }
+}
+```
+
+In the handleSubmit function, you prevent the form's default action. Then, you update the user's input state.
+
+Using POST gives you the same response object with information that you can use in a then call.
+
+To complete the POST request, you must first enter the user input. Then you add the data along with the POST request, which will give you a response. You can then use console.log for the response, which should show the user entry in the form.
+
+##### Build a DELETE request
+
+In this example, you'll see how to remove items from an API using axios.delete and passing a URL as a parameter.
+
+Change the code in the form in the POST example to delete a user instead of adding a new one:
+
+```js
+import React from 'react';
+import axios from 'axios';
+
+export default class PersonList extends React.Component {
+  state = {
+    id: '',
+  }
+
+  handleChange = event => {
+    this.setState({ id: event.target.value });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    axios.delete(`https://jsonplaceholder.typicode.com/users/${this.state.id}`)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  }
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Person ID:
+            <input type="text" name="id" onChange={this.handleChange} />
+          </label>
+          <button type="submit">Delete</button>
+        </form>
+      </div>
+    )
+  }
+}
+```
+
+Again, the res object provides you with information about the request. You can then reenter this information in the console.log file after submitting the form.
+
+Here we have the main queries achievable with Axios. This will allow you to be able to make API calls in POST and GET.
+
+
+#### RESTful API advantages
 
 ###### Client-server separation
 
@@ -163,9 +283,9 @@ A client is the one who will use the API. It can be an application, browser, or 
 
 Generally speaking, there is a separation between the client and the server. This separation allows the client to be concerned only with retrieving and displaying information, and allows the server to concentrate on storing and manipulating data. Everyone has their own role!
 
-REST APIs provide a standardized means of communication between client and data. Basically, it doesn't matter how the server is built or how the client is coded, as long as they both structure their communication according to REST architectural guidelines, using the HTTP protocol, they will be able to communicate with each other! 
+REST APIs provide a standardized means of communication between client and data. Basically, it doesn't matter how the server is built or how the client is coded, as long as they both structure their communication according to REST architectural guidelines, using the HTTP protocol, they will be able to communicate with each other!
 
-This is especially useful when large teams of developers are working on a single application. You can have one team working independently on the backend while the other works on the frontend. As the REST API communicates between the two, it makes it easier for developers to scale applications and for teams to work more efficiently. 
+This is especially useful when large teams of developers are working on a single application. You can have one team working independently on the backend while the other works on the frontend. As the REST API communicates between the two, it makes it easier for developers to scale applications and for teams to work more efficiently.
 
 ###### Stateless
 
@@ -173,10 +293,80 @@ One of the other unique aspects of REST APIs is that they are stateless which me
 
 ###### Others
 
- * Easier to implement than the classic alternatives (we are not talking about WebSockets).
- * All you need is a browser to access a service.
- * Caching of resources, therefore speeding up operations.
- * Less memory consumption.
- * Possibility of distributing requests on several servers. This thanks to the absence of states.
- * The use of standard formats such as HTML or XML ensures compatibility over time.
- * You can exchange requests between various applications or media because they are represented by URIs.
+* Easier to implement than the classic alternatives (we are not talking about WebSockets).
+* All you need is a browser to access a service.
+* Caching of resources, therefore speeding up operations.
+* Less memory consumption.
+* Possibility of distributing requests on several servers. This thanks to the absence of states.
+* The use of standard formats such as HTML or XML ensures compatibility over time.
+* You can exchange requests between various applications or media because they are represented by URIs.
+
+#### Exercise
+
+In this exercise, you have to call an API and display the result.
+
+* Set-up:
+* A router will have to govern all the navigation of your application (no ```<a href = ...```)
+* Each exercise will be represented by a component
+* A menu, permanently visible, will allow access to each exercise of the previous lab
+* The url for accessing each exercise must be of the type: http: // localhost: 3000 / exercise / 1
+
+* Parameters and API
+  Create a new Country component, which will use the code below. Read it carefully, and make sure you understand it before continuing.
+
+```js
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+const Country = props => {
+  const [countryFromUrl, setCountryFromUrl] = useState("");
+  const [topLevelDomain, setTopLevelDomain] = useState("");
+  const [capital, setCapital] = useState("");
+  const [population, setPopulation] = useState(0);
+
+  useEffect(() => {
+    // TODO
+  }, [props.match.params.name]);
+
+  useEffect(() => {
+    // TODO, appel à l'API https://restcountries.eu/rest/v2/name/[COUNTRY_NAME]
+    // extraction et sauvergarde des données à afficher (voir render())
+  }, [countryFromUrl]);
+
+  return (
+    <div>
+      <h1>{countryFromUrl}</h1>
+      Domaine web : <b>{topLevelDomain}</b>
+      <br />
+      Capitale : <b>{capital}</b>
+      <br />
+      Population : <b>{population}</b>
+      <br />
+    </div>
+  );
+};
+
+export default Country;
+```
+
+The objective of this component is to call the API https://restcountries.eu/rest/v2/name/, in order to retrieve information (web domain, capital, and population).
+
+As you can see on line 12, we will retrieve the name of the country to search for in the url of our application. This will require defining a route in App.js, which will accept a parameter. You should not define more than one route.
+
+You do not need to edit the menu, but you can add the following entries to it:
+
+```js
+<Link to="/country/France">France</Link>
+<Link to="/country/Germany">Allemagne</Link>
+<Link to="/country/Canada">Canada</Link>
+```
+
+##### Exercise correction :
+
+[This is the exercise correction](https://codesandbox.io/s/github/touggani/react-api-exercise/tree/main/?fontsize=14&hidenavigation=1&theme=dark){.btn .btn-info}
+
+### Final Quiz
+
+Congratulations you finish the Introduction to React course. Now you have to evaluate your knowledge.
+
+[The final Quiz](https://docs.google.com/forms/d/e/1FAIpQLSfrLa9BUC8Cb4iDM5Akn-n7rYUwz1Dm8zJK7wKDHND_cQh9Hw/viewform?usp=sf_link){.btn .btn-info}
