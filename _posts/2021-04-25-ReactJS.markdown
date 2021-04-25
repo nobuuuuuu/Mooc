@@ -2,7 +2,7 @@
 layout: post
 title:  "React JS"
 date:   2021-04-25
-categories: jekyll update
+categories: moocs
 ---
 # React JS
 
@@ -10,63 +10,63 @@ categories: jekyll update
 
 ## Plan and details
 
-### [I. Introduction to React](#introduction-to-react)
+### [Introduction to React](#introduction-to-react)
 
 #### [What is React js](#what-is-react-js)
 
-#### b. Why you would learn react js?
+#### [Why you would learn react js](#why-you-would-learn-react-js)
 
-#### c. Educational objective and prerequisites
+#### [Educational objective and prerequisites](#educational-objective-and-prerequisites)
 
-#### d. Mooc summarize
+#### [Mooc summarize](#mooc-summarize)
 
-### II. Start off on the right foot
+### [Start off on the right foot](#start-off-on-the-right-foot)
 
-#### a. Work environment installations
+#### [Work environment installations](#work-environment-installations)
 
-#### b. Let’s try it!
+#### [Let's try it](#lets-try-it)
 
-### III. Understand some important concepts
+### [Understand some important concepts](#understand-some-important-concepts)
 
-#### a. Virtual DOM
+#### [Virtual DOM](#virtual-dom)
 
-#### b. Component
+#### [Component](#component)
 
-#### c. Props
+#### [Props](#props)
 
-#### d. States
+#### [States](#states)
 
-#### e. Hooks
+#### [Hooks](#hooks)
 
-#### f. Quizz
+#### [Quizz](#quizz)
 
-### IV. Build our first application (simple calculator)
+### [Build our first application](#build-our-first-application)
 
-#### a. Create and organize our files
+#### [Create and organize our files](#create-and-organize-our-files)
 
-#### b. Build the first component with props
+#### [Build the first component with props](#build-the-first-component-with-props)
 
-#### c. Define methods
+#### [Define methods](#define-methods)
 
-#### d. Set up a local state
+#### [Set up a local state](#set-up-a-local-state)
 
-#### e. Update the local state with “setState”
+#### [Update the local state with setState](#update-the-local-state-with-setstate)
 
-#### d. Exercise: Build a calculator
+#### [Exercise Build a calculator](#exercise-build-a-calculator)
 
-### V. React and RESTful API
+### [React and RESTful API](#v.-react-and-restful-api)
 
-#### a. What a RESTful API is ?
+#### [a. What a RESTful API is ?](#what-a-resftul-api-is)
 
-#### b. Setup the project
+#### [b. Setup the project](#setup-the-projet)
 
-#### c. Calling the API
+#### [c. Calling the API](#calling-the-api)
 
-#### d. Manipulate the API return 
+#### [d. Manipulate the API return](#manipulate-the-api-return)
 
 ---
 
-## I. Introduction to React
+## Introduction to React
 
 ### What is React js
 
@@ -76,7 +76,7 @@ categories: jekyll update
 
 This part is a plus and will help you to optimize your application and the possibility to add more. The RESTful API is use by lot of application because this method proposes different advantages. But which advantages can we get with the RESTful API? First of all, we can see what a RESTful API is. 
 
-#### a. What a RESTful API is ?
+#### What a RESTful API is
 
 A REST API (also called a RESTful API) is an application programming interface that respects the constraints of the REST (for “Representational State Transfer”) architecture.
 
