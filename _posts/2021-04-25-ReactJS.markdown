@@ -6,6 +6,8 @@ categories: moocs
 ---
 # React JS
 
+![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
+
 ---
 
 ## Table of Contents
