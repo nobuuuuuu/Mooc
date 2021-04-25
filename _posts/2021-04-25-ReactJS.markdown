@@ -70,6 +70,7 @@ categories: jekyll update
 
 ### a. What is React js?
 
+![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
 
 ### V. React and RESTful API
 
@@ -108,32 +109,44 @@ Although the REST API must meet all of these criteria, it is considered to be ea
 
 #### b. Setup the project
 
-* Preconditions:
+##### Preconditions:
  * Node.js version 10.16.0 installed on your computer. To install it on macOS or Ubuntu 18.04, follow the steps of the tutorial How to install Node.js and create a local development environment on macOS or the * Installation using a PPA * section of the tutorial How to install Node.js on Ubuntu 18.04.
  * A new React project set up with Create React App by following the tutorial How to set up a React project with Create React App.
  * It will also be helpful to have a basic understanding of JavaScript, which you can find in the How to Code in JavaScript series, as well as a basic knowledge of HTML and CSS.
 
-* Step 1:
+###### Step 1:
 In this section, you will add Axios to the React digital-ocean-tutorial project that you created by following the How to set up a React project with Create React App tutorial.
 
 To add Axios to the project, open your terminal and change directory in your project:
-•	[color=#F0F0F0]$ cd digital-ocean-tutorial[/color]
+
+```bash
+cd digital-ocean-tutorial
+```
 
 Then run this command to install Axios:
-•	[color=#F0F0F0]$ npm install axios[/color]
+
+```bash
+npm install axios
+```
 
 Then you will need to import Axios to the file where you want to use it.
 
-* Step 2: Build the GET request
+###### Step 2: Build the GET request
+
 In this example, you create a new component and import Axios into it to send a GET request.
 
 In the src folder of your React project, create a new component named PersonList.js:
-•	[color=#F0F0F0]$ nano src/PersonList.js[/color]
+
+```bash
+nano src/PersonList.js
+```
+
 
 Add the following code to the component:
-- File: Project/src/PersonList.js
 
-```
+*Project/src/PersonList.js*
+
+```js
 import React from 'react';
 import axios from 'axios';
 
@@ -166,7 +179,8 @@ export default class PersonList extends React.Component {
 
 #### d. RESTful API advantages
 
-* Client-server separation
+###### Client-server separation
+
 One of the standards of REST is the separation of client and server. We touched on the issue of clients and servers a bit in the previous chapter, it's time to dig deeper!
 
 A client is the one who will use the API. It can be an application, browser, or software. For example: As a developer, you might be using the Twitter API. As I said before, a client can also be software or a browser, whether it's Chrome, Safari, or Firefox. When a browser visits twitter.com, it makes a request to the Twitter API and uses the data from the API so that you can access the latest tweets.
@@ -177,11 +191,11 @@ REST APIs provide a standardized means of communication between client and data.
 
 This is especially useful when large teams of developers are working on a single application. You can have one team working independently on the backend while the other works on the frontend. As the REST API communicates between the two, it makes it easier for developers to scale applications and for teams to work more efficiently. 
 
-* Stateless
+###### Stateless
 
 One of the other unique aspects of REST APIs is that they are stateless which means that the server does not save any of the previous requests or responses.
 
-* Others
+###### Others
 
  * Easier to implement than the classic alternatives (we are not talking about WebSockets).
  * All you need is a browser to access a service.
@@ -190,8 +204,3 @@ One of the other unique aspects of REST APIs is that they are stateless which me
  * Possibility of distributing requests on several servers. This thanks to the absence of states.
  * The use of standard formats such as HTML or XML ensures compatibility over time.
  * You can exchange requests between various applications or media because they are represented by URIs.
-
-
-
-
-![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
