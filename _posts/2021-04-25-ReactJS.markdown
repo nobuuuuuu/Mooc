@@ -10,59 +10,33 @@ categories: moocs
 
 ## Table of Contents
 
-* [Introduction to React](#introduction-to-react)
-
-#### [What is React js](#what-is-react-js)
-
-#### [Why you would learn react js](#why-you-would-learn-react-js)
-
-#### [Educational objective and prerequisites](#educational-objective-and-prerequisites)
-
-#### [Mooc summarize](#mooc-summarize)
-
-### [Start off on the right foot](#start-off-on-the-right-foot)
-
-#### [Work environment installations](#work-environment-installations)
-
-#### [Let's try it](#lets-try-it)
-
-### [Understand some important concepts](#understand-some-important-concepts)
-
-#### [Virtual DOM](#virtual-dom)
-
-#### [Component](#component)
-
-#### [Props](#props)
-
-#### [States](#states)
-
-#### [Hooks](#hooks)
-
-#### [Quizz](#quizz)
-
-### [Build our first application](#build-our-first-application)
-
-#### [Create and organize our files](#create-and-organize-our-files)
-
-#### [Build the first component with props](#build-the-first-component-with-props)
-
-#### [Define methods](#define-methods)
-
-#### [Set up a local state](#set-up-a-local-state)
-
-#### [Update the local state with setState](#update-the-local-state-with-setstate)
-
-#### [Exercise Build a calculator](#exercise-build-a-calculator)
-
-### [React and RESTful API](#v.-react-and-restful-api)
-
-#### [a. What a RESTful API is ?](#what-a-resftul-api-is)
-
-#### [b. Setup the project](#setup-the-projet)
-
-#### [c. Calling the API](#calling-the-api)
-
-#### [d. Manipulate the API return](#manipulate-the-api-return)
+* [I. Introduction to React](#introduction-to-react)
+* [a. What is React js](#what-is-react-js)
+* [b. Why you would learn react js](#why-you-would-learn-react-js)
+* [c. Educational objective and prerequisites](#educational-objective-and-prerequisites)
+* [d. Mooc summarize](#mooc-summarize)
+* [II. Start off on the right foot](#start-off-on-the-right-foot)
+* [a. Work environment installations](#work-environment-installations)
+* [b. Let's try it](#lets-try-it)
+* [III Understand some important concepts](#understand-some-important-concepts)
+* [a. Virtual DOM](#virtual-dom)
+* [b. Component](#component)
+* [c. Props](#props)
+* [d. States](#states)
+* [e. Hooks](#hooks)
+* [f. Quizz](#quizz)
+* [IV. Build our first application](#build-our-first-application)
+* [a. Create and organize our files](#create-and-organize-our-files)
+* [b. Build the first component with props](#build-the-first-component-with-props)
+* [c. Define methods](#define-methods)
+* [d. Set up a local state](#set-up-a-local-state)
+* [e. Update the local state with setState](#update-the-local-state-with-setstate)
+* [f. Exercise Build a calculator](#exercise-build-a-calculator)
+* [V. React and RESTful API](#v.-react-and-restful-api)
+* [a. What a RESTful API is ?](#what-a-resftul-api-is)
+* [b. Setup the project](#setup-the-projet)
+* [c. Calling the API](#calling-the-api)
+* [d. Manipulate the API return](#manipulate-the-api-return)
 
 ---
 
