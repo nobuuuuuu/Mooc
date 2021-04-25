@@ -44,7 +44,7 @@ categories: moocs
 ### Introduction to React
 
 Our mooc subject is learning to use React js.  
-React js is an open-source, front end, JavaScript library for building user interfaces or UI components
+React js is an open-source, front end, JavaScript library for building user interfaces or UI components
 
 Through this course, you will have the opportunity to use React JS to create frontend web applications.
 Various exercises will be proposed to you in order to evaluate your progress.
