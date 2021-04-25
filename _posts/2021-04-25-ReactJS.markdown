@@ -66,9 +66,9 @@ categories: moocs
 
 ---
 
-## Introduction to React
+### Introduction to React
 
-### What is React js
+#### What is React js
 
 ![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
 
