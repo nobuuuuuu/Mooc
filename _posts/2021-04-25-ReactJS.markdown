@@ -8,9 +8,9 @@ categories: moocs
 
 ---
 
-## Plan and details
+## Table of Contents
 
-### [Introduction to React](#introduction-to-react)
+* [Introduction to React](#introduction-to-react)
 
 #### [What is React js](#what-is-react-js)
 
