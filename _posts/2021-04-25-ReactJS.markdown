@@ -8,64 +8,64 @@ categories: jekyll update
 
 ---
 
-##Plan and details
+## Plan and details
 
-###I. Introduction to React
+### I. Introduction to React
 
-####a. What is React js?
+#### a. What is React js?
 
-####b. Why you would learn react js?
+#### b. Why you would learn react js?
 
-####c. Educational objective and prerequisites
+#### c. Educational objective and prerequisites
 
-####d. Mooc summarize
+#### d. Mooc summarize
 
-###II. Start off on the right foot
+### II. Start off on the right foot
 
-####a. Work environment installations
+#### a. Work environment installations
 
-####b. Let’s try it!
+#### b. Let’s try it!
 
-###III. Understand some important concepts
+### III. Understand some important concepts
 
-####a. Virtual DOM
+#### a. Virtual DOM
 
-####b. Component
+#### b. Component
 
-####c. Props
+#### c. Props
 
-####d. States
+#### d. States
 
-####e. Hooks
+#### e. Hooks
 
-####f. Quizz
+#### f. Quizz
 
-###IV. Build our first application (simple calculator)
+### IV. Build our first application (simple calculator)
 
-####a. Create and organize our files
+#### a. Create and organize our files
 
-####b. Build the first component with props
+#### b. Build the first component with props
 
-####c. Define methods
+#### c. Define methods
 
-####d. Set up a local state
+#### d. Set up a local state
 
-####e. Update the local state with “setState”
+#### e. Update the local state with “setState”
 
-####d. Exercise: Build a calculator
+#### d. Exercise: Build a calculator
 
-###V. React and RESTful API
+### V. React and RESTful API
 
-####a. Setup the project
+#### a. Setup the project
 
-####b. Calling the API
+#### b. Calling the API
 
-####c. Manipulate the API return  
+#### c. Manipulate the API return  
 
 ---
 
-##I. Introduction to React
+## I. Introduction to React
 
-###a. What is React js?
+### a. What is React js?
 
 ![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
