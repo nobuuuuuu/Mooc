@@ -7,3 +7,65 @@ categories: jekyll update
 # React JS
 
 ---
+
+##Plan and details
+
+###I. Introduction to React
+
+####a. What is React js?
+
+####b. Why you would learn react js?
+
+####c. Educational objective and prerequisites
+
+####d. Mooc summarize
+
+###II. Start off on the right foot
+
+####a. Work environment installations
+
+####b. Let’s try it!
+
+###III. Understand some important concepts
+
+####a. Virtual DOM
+
+####b. Component
+
+####c. Props
+
+####d. States
+
+####e. Hooks
+
+####f. Quizz
+
+###IV. Build our first application (simple calculator)
+
+####a. Create and organize our files
+
+####b. Build the first component with props
+
+####c. Define methods
+
+####d. Set up a local state
+
+####e. Update the local state with “setState”
+
+####d. Exercise: Build a calculator
+
+###V. React and RESTful API
+
+####a. Setup the project
+
+####b. Calling the API
+
+####c. Manipulate the API return  
+
+---
+
+##I. Introduction to React
+
+###a. What is React js?
+
+![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
