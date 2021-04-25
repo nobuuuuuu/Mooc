@@ -363,10 +363,10 @@ You do not need to edit the menu, but you can add the following entries to it:
 
 ##### Exercise correction :
 
-[This is the exercise correction](https://codesandbox.io/s/github/touggani/react-api-exercise/tree/main/?fontsize=14&hidenavigation=1&theme=dark){.btn .btn-info}
+[This is the exercise correction](https://codesandbox.io/s/github/touggani/react-api-exercise/tree/main/?fontsize=14&hidenavigation=1&theme=dark)
 
 ### Final Quiz
 
 Congratulations you finish the Introduction to React course. Now you have to evaluate your knowledge.
 
-[The final Quiz](https://docs.google.com/forms/d/e/1FAIpQLSfrLa9BUC8Cb4iDM5Akn-n7rYUwz1Dm8zJK7wKDHND_cQh9Hw/viewform?usp=sf_link){.btn .btn-info}
+[The final Quiz](https://docs.google.com/forms/d/e/1FAIpQLSfrLa9BUC8Cb4iDM5Akn-n7rYUwz1Dm8zJK7wKDHND_cQh9Hw/viewform?usp=sf_link)
