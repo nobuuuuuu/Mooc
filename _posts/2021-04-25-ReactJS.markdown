@@ -379,7 +379,11 @@ Hooks are JavaScript functions, but they impose two additional rules:
 
 We provide an ESLint plugin which ensures compliance with these two rules. We understand that these rules may seem limiting or confusing at first, but they are essential for Hooks to work properly.
 
-#### Quizz
+#### Quiz
+
+Little quiz to evaluate your knowledge of this theoretical part !
+
+[Quiz]https://docs.google.com/forms/d/e/1FAIpQLSfSA3yBgEhaxJBZc0_HtgzpMluDEOcbd--dFLB01VE3wb8t1g/viewform?usp=sf_link
 
 ### React and RESTful API
 
