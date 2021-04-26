@@ -454,6 +454,87 @@ Little quiz to evaluate your knowledge of this theoretical part !
 
 [Quiz](https://docs.google.com/forms/d/e/1FAIpQLSfSA3yBgEhaxJBZc0_HtgzpMluDEOcbd--dFLB01VE3wb8t1g/viewform?usp=sf_link)
 
+### Build our first application
+
+#### Create and organize our files
+
+To begin, we will create our react application using CRA.
+
+To do this, open a terminal and type the following command:
+
+```bash
+npx create-react-app my-app
+```
+*my-app* is the name you want to give to your react application.
+
+The software will create all the files needed for the application to work properly, install dependencies and even initialise a local git repository.
+
+#### Build the first component with props
+
+Create a new file *Calculator.js*
+
+```js
+function add(a,b){
+    let result = a+b
+    return result
+}
+
+function sub(a,b){
+    let result = a-b
+    return result
+}
+
+function mul(a,b){
+    let result = a*b
+    return result
+}
+
+function div(a,b){
+    let result = a/b
+    return result
+}
+
+export { add, sub, mul, div };
+```
+
+*index.js*
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { add, sub, mul, div } from './Calculator.js';
+
+function Result(props) {
+  return <h1>{props.nbr1} + {props.nbr2} = {add(props.nbr1,props.nbr2)}</h1>;
+}
+
+let props = {
+  nbr1:2,
+  nbr2:5
+}
+const element = <Result {...props} />;
+
+ReactDOM.render(
+    element, 
+    document.getElementById('root')
+);
+```
+
+Test vidéo youtube
+
+{% youtube P-uhgIzHYYo %}
+
+#### Define methods
+
+#### Set up a local state
+
+#### Update the local state with setState
+
+#### Exercise Build a calculator
+
+More detailed example [here](https://codepen.io/mjijackson/pen/xOzyGX).
+
 ### React and RESTful API
 
 This part is a plus and will help you to optimize your application and the possibility to add more. The RESTful API is use by lot of application because this method proposes different advantages. But which advantages can we get with the RESTful API? First of all, we can see what a RESTful API is.
