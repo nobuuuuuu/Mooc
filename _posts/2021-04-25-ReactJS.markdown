@@ -3,8 +3,7 @@ layout: post
 title:  "React JS"
 date:   2021-04-25
 categories: moocs
----
-# React JS
+--
 
 ![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
 
@@ -42,8 +41,6 @@ categories: moocs
 
 ---
 
-### Introduction to React
-
 Our mooc subject is learning to use React js.  
 React js is an open-source, front end, JavaScript library for building user interfaces or UI components
 
@@ -55,9 +52,9 @@ All the tutorials will be offered in a GIT and Code Sand Box format so that you 
 
 If you prefer to use a local tool on your computer, the recommended editors are Visual Studio Code, Notepad ++ or Sublime Text.
 
-#### What is React js?
+### Introduction to React
 
-![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
+#### What is React js?
 
 React is a library in the frontend frameworks category, which only manages the interface of a site.
 But before you start hostilities ... a frontend framework, what is it? It is a set of software that is used to create user interfaces, such as web or mobile applications. The goal of the "front framework" to provide a ready-to-use solution for the development of these applications. Among the most used are Angular, Ember, Vue.js, React and many others.
@@ -71,6 +68,12 @@ What about React in all of this? Also called React.js or React JS, it is an open
 * High paying jobs
 * Popularity and community
 * Mobile and VR
+
+![Why](https://miro.medium.com/max/1248/1*_Z2W8urXttbKVBaryY9PfQ.png)
+
+Popular apps using React
+
+![Popular](https://www.simform.com/wp-content/uploads/2020/01/React-websites.png)
 
 #### Educational goals and prerequisites
 
