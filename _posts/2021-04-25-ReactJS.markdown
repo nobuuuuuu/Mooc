@@ -96,13 +96,43 @@ Necessary tools:
 
 * npm 5.3+;
 
+### Start off on the right foot
+
+#### Work environment installations
+
+You can choose your favorite editor among the following ones:
+
+* [Visual Studio Code](https://code.visualstudio.com/download)
+* [Notepad ++](https://notepad-plus-plus.org/downloads/)
+* [Sublime Text](https://www.sublimetext.com/3)
+
+If you prefer to use a cloud-based solution, we will use [Code Sand Box](https://codesandbox.io/)
+
+You will also need to install [GIT](https://git-scm.com/downloads) on your computer in order to retrieve/publish your repositories containing your code.
+
+You will have to install [NPM](https://nodejs.org/en/), the Node JS package manager. 
+It will allow you to install various tools that are essential to the proper functioning of React JS.
+
+Once NPM is installed, you can install YARN (Yet Another Resource Negotiator), it is a resource manager allowing applications to run.
+To do this, simply open your command terminal and type the following line:
+
+``` bash
+npm install --global yarn
+```
+
+There are also tools such as [CRA (Create React App)](https://github.com/facebook/create-react-app) to easily create a React application with all the necessary dependencies.
+
+But also [React Native for Web](https://github.com/necolas/react-native-web) which is a utility allowing the association in a dynamic way between the various parts of the DOM.
+
+#### Lets try it
+
+You can already experiment with React JS libraries with this [Code Sand Box template](https://codesandbox.io/s/react-native-q4qymyp2l6).
+
 ### Understand some important concepts
 
 In this part, we'll see the major concepts of React essential in order to use the full potential of this library.
 
-#### Virtual DOM
-
-##### What is the virtual DOM?
+##### Virtual DOM
 
 Virtual DOM (VDOM) is a programming concept in which an ideal, or "virtual" representation of a user interface (UI) is held in memory and synchronized with the "real" DOM ​​by a library such as ReactDOM. This process is called reconciliation.
 
