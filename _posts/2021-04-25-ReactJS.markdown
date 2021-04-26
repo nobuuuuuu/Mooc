@@ -15,8 +15,7 @@ categories: moocs
 * [I. Introduction to React](#introduction-to-react)
   * [a. What is React js](#what-is-react-js)
   * [b. Why you would learn react js](#why-you-would-learn-react-js)
-  * [c. Educational objective and prerequisites](#educational-objective-and-prerequisites)
-  * [d. Mooc summarize](#mooc-summarize)
+  * [c. Educational goals and prerequisites](#educational-goals-and-prerequisites)
 * [II. Start off on the right foot](#start-off-on-the-right-foot)
   * [a. Work environment installations](#work-environment-installations)
   * [b. Let's try it](#lets-try-it)
@@ -56,9 +55,46 @@ All the tutorials will be offered in a GIT and Code Sand Box format so that you 
 
 If you prefer to use a local tool on your computer, the recommended editors are Visual Studio Code, Notepad ++ or Sublime Text.
 
-### What is React js?
+#### What is React js?
 
 ![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
+
+React is a library in the frontend frameworks category, which only manages the interface of a site.
+But before you start hostilities ... a frontend framework, what is it? It is a set of software that is used to create user interfaces, such as web or mobile applications. The goal of the "front framework" to provide a ready-to-use solution for the development of these applications. Among the most used are Angular, Ember, Vue.js, React and many others.
+
+What about React in all of this? Also called React.js or React JS, it is an open source front-end framework that has been developed by Facebook since 2013 by Jordan Walke. The main purpose of this library is to "facilitate the creation of single-page web applications (SPA), by creating state-dependent components and generating an HTML page or portion with each change of state".
+
+#### Why you would learn react js?
+
+* Most loved and used library
+* Easy to use
+* High paying jobs
+* Popularity and community
+* Mobile and VR
+
+#### Educational goals and prerequisites
+
+**Educational goals:**
+
+* Be able to explain the fundamental concepts of React, and what makes it different from other frameworks
+
+* Build complete React components with ES2015 JavaScript syntax and extend JSX
+
+* Manage forms with or without input control
+
+* React component tester
+
+**Prerequisites:**
+
+This course should master the basics of programming with JavaScript, as well as concepts of object-oriented programming.
+
+Necessary tools:
+
+* an IDE like Visual Studio Code;
+
+* Node;
+
+* npm 5.3+;
 
 ### Understand some important concepts
 
