@@ -69,11 +69,11 @@ What about React in all of this? Also called React.js or React JS, it is an open
 * Popularity and community
 * Mobile and VR
 
-![Why](https://miro.medium.com/max/1248/1*_Z2W8urXttbKVBaryY9PfQ.png)
+![Why](/assets/React-why.png)
 
 Popular apps using React
 
-![Popular](https://www.simform.com/wp-content/uploads/2020/01/React-websites.png)
+![Popular](/assets/React-websites.png)
 
 #### Educational goals and prerequisites
 
