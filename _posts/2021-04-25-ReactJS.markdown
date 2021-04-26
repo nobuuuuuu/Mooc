@@ -22,11 +22,10 @@ categories: moocs
   * [b. Let's try it](#lets-try-it)
 * [III Understand some important concepts](#understand-some-important-concepts)
   * [a. Virtual DOM](#virtual-dom)
-  * [b. Component](#component)
-  * [c. Props](#props)
-  * [d. States](#states)
-  * [e. Hooks](#hooks)
-  * [f. Quizz](#quizz)
+  * [b. Components and Props](#component)
+  * [c. States and Lifecycle](#states)
+  * [d. Hooks](#hooks)
+  * [e. Quizz](#quizz)
 * [IV. Build our first application](#build-our-first-application)
   * [a. Create and organize our files](#create-and-organize-our-files)
   * [b. Build the first component with props](#build-the-first-component-with-props)
@@ -60,6 +59,327 @@ If you prefer to use a local tool on your computer, the recommended editors are 
 ### What is React js?
 
 ![React JS](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/langfr-220px-React-icon.svg.png "Logo React JS")
+
+### Understand some important concepts
+
+In this part, we'll see the major concepts of React essential in order to use the full potential of this library.
+
+#### Virtual DOM
+
+##### What is the virtual DOM?
+
+Virtual DOM (VDOM) is a programming concept in which an ideal, or "virtual" representation of a user interface (UI) is held in memory and synchronized with the "real" DOM ​​by a library such as ReactDOM. This process is called reconciliation.
+
+This approach makes React's declarative API possible: you tell React what state you want the UI to be in, and it makes sure the DOM matches that state. This allows you to ignore the attribute manipulation, event handling, and manual DOM update that you would normally have had to do yourself to build your application.
+
+Since the "virtual DOM" is more of a model than a specific technology, it is sometimes used to mean different things. In the React world, the term "virtual DOM" is commonly associated with React elements because they are the objects that represent the user interface. However, React also uses internal objects called "fibers" to hold additional information about the component tree. They can also be seen as part of the "virtual DOM" implementation in React.
+
+#### Components and Props
+
+Components allow you to break down the user interface into independent, reusable elements, allowing you to view each element in isolation.
+
+Conceptually, components are like JavaScript functions. They take any input (called "props") and return React elements describing what should appear on the screen.
+
+##### Component functions and class-based components
+
+The easiest way to define a component is to write a JavaScript function:
+
+``` js
+function Welcome (props) {
+  return <h1> Hello, {props.name} </h1>;
+}
+```
+
+This function is a valid React component because it accepts a single "props" (which stands for "properties") argument containing data, and returns a React element. We call such components "component functions" because they are literally JavaScript functions.
+
+You can also use an ES6 class to define a component:
+
+``` js
+class Welcome extends React.Component {
+  render () {
+    return <h1> Hello, {this.props.name} </h1>;
+  }
+}
+```
+
+The two components above are equivalent from React's point of view.
+
+Components (both functions and classes) have a few additional features which we will discuss in the next sections.
+
+##### Produce the rendering of a component
+
+So far, we've only seen React elements representing DOM tags:
+
+``` js
+const element = <div />;
+```
+
+But these elements can also represent user-defined components:
+
+``` js
+const element = <Welcome name = "Sara" />;
+```
+
+When React encounters an element representing a user-defined component, it passes the JSX attributes and children to that component as a single object. We call this object “props”.
+
+For example, this code displays "Hello, Sara" on the page:
+
+``` js
+function Welcome (props) {
+  return <h1> Hello, {props.name} </h1>;
+}
+
+const element = <Welcome name = "Sara" />;
+ReactDOM.render (
+  element,
+  document.getElementById ('root')
+);
+```
+
+Let's recap what happens in this example:
+
+1. We call ReactDOM.render () with the <Welcome name = "Sara" /> element.
+2. React calls the Welcome component with the props {name: 'Sara'}.
+3. Our Welcome component returns a Hello, Sara element for result.
+4. React DOM efficiently updates the DOM to match Hello, Sara.
+
+##### Composition of components
+
+Components can refer to other components in their output. This allows us to use the same abstraction of components for any level of detail. A button, a form, a dialog, a screen: in React, they are usually all expressed by components.
+
+For example, we can create an App component that uses Welcome multiple times:
+
+``` js
+function Welcome (props) {
+  return <h1> Hello, {props.name} </h1>;
+}
+
+function App () {
+  return (
+    <div>
+      <Welcome name = "Sara" />
+      <Welcome name = "Cahal" />
+      <Welcome name = "Edit" />
+    </div>
+  );
+}
+
+ReactDOM.render (
+  <App />,
+  document.getElementById ('root')
+);
+```
+
+Typically, new React apps have a single App component at the root. On the other hand, if you integrate React into an existing application, you can start at the bottom with a small component like Button and gradually move up the view hierarchy.
+
+#### States and Lifecycle
+
+React components has a built-in state object. The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders.
+
+##### Use the local state correctly
+
+There are three things you should know about setState().
+
+**Do not modify the state directly**
+
+For example, this will not trigger a component refresh:
+
+``` js
+// Wrong
+this.state.comment = 'Hello';
+```
+Instead, use setState():
+
+``` js
+// Correct
+this.setState ({comment: 'Hello'});
+```
+
+The only place you can assign this.state is in the constructor.
+
+**Status updates can be asynchronous**
+
+React can bundle multiple setState() calls into a single update for performance reasons.
+
+Because this.props and this.state can be updated asynchronously, you should not rely on their values to calculate the next state.
+
+For example, this code may fail to update a counter:
+
+``` js
+// Wrong
+this.setState ({
+  counter: this.state.counter + this.props.increment,
+});
+```
+To work around this problem, use the second form of setState() which accepts a function instead of an object. This function will receive the previous state as the first argument and the props at update time as the second argument:
+
+``` js
+// Correct
+this.setState ((state, props) => ({
+  counter: state.counter + props.increment
+}));
+```
+
+We used an arrow function above, but a normal function also works:
+
+``` js
+// Correct
+this.setState (function (state, props) {
+  return {
+    counter: state.counter + props.increment
+  };
+});
+```
+
+**Status updates are merged**
+
+When you invoke setState(), React merges the objects you give with the current state.
+
+For example, your report may contain several independent variables:
+
+``` js
+  constructor (props) {
+    super (props);
+    this.state = {
+      posts: [],
+      comments: []
+    };
+  }
+```
+
+Then you can update them independently with separate calls to setState():
+
+``` js
+  componentDidMount () {
+    fetchPosts (). then (response => {
+      this.setState ({
+        posts: response.posts
+      });
+    });
+
+    fetchComments (). then (response => {
+      this.setState ({
+        comments: response.comments
+      });
+    });
+  }
+```
+
+The merge is not deep, so this.setState ({comments}) leaves this.state.posts intact, but completely replaces this.state.comments.
+
+##### Understanding the ReactJS Lifecycle
+
+Each React component goes through different stages during which it is possible to intervene. This is called the life cycle of a component. It is divided into 3 parts:
+
+* Mount: the mount. It occurs when an instance of the component is created in the DOM.
+
+* Update: the update. This life cycle is triggered by a change in state of the component.
+
+* Unmount: disassembly. This method is called after a component is removed from the DOM.
+
+Everything revolves around these 3 cycles of life.
+
+##### The different events
+
+Before looking at each of the life cycles in detail, here are the different stages that may exist. Depending on the current lifecycle, not all of them are called. I'm not going to talk about the UNSAFE_ methods which are deprecated and should disappear in React 17.
+
+**Mount**
+
+1. constructor()
+2. render()
+3. componentDidMount()
+
+**Update**
+
+1. shouldComponentUpdate(nextProps, nextState, nextContext)
+2. render()
+3. componentDidUpdate()
+
+**Unmount**
+
+componentWillUnmount()
+
+All of these methods are available when using a class component.
+
+#### Hooks
+
+Hooks are new in React 16.8. They allow you to benefit from local state and other React features without having to write classes.
+
+##### 📌 State hook
+
+This example displays a counter. When you click on the button, the value increases:
+
+``` js
+import React, {useState} from 'react';
+
+function Example () {
+  // Declaration of a new state variable, which we will call “count”
+  const [count, setCount] = useState (0);
+
+  return (
+    <div>
+      <p> You clicked {count} times </p>
+      <button onClick = {() => setCount (count + 1)}>
+        Click here
+      </button>
+    </div>
+  );
+}
+```
+
+In the code above, useState is a Hook (we'll see what that means in a moment). We call it inside a component function to add a local state to it. React will preserve this state from display to display. useState returns a pair: the current state value and a function that lets you update it. You can call this function from an event handler, for example. It is similar to this.setState in a class, except that it does not merge the old state with the new one. (We'll see an example of a comparison between useState and this.state in Using the State Hook.)
+
+The only argument to useState is the initial state. In the previous example, it is 0 since our counter starts at zero. Note that unlike this.state, here the state is not necessarily an object, although that is still possible. The initial state argument is only used for the first display.
+
+##### But what is a hook ?
+
+Hooks are functions that allow you to "plug in" to React's local state and lifecycle management from component functions. Hooks don't work in classes: they allow you to use React without classes. (We don't recommend rewriting your existing components overnight, but you can start using Hooks in your new components if you want to.)
+
+React provides a few predefined Hooks like useState. You can also create your own Hooks to reuse stateful behavior in different components. First, we will discuss the predefined Hooks.
+
+##### ⚡️ Effect Hook
+
+You've probably already done remote data upload, subscriptions, or manual DOM changes from a React component. We call these operations "side effects" (or effects for short) because they can affect other components and cannot be performed while viewing.
+
+The effect hook, useEffect, allows functions to handle side effects. It plays the same role as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but through a single API. (We'll see examples comparing useEffect to these methods in Using the Effect Hook.)
+
+For example, this component changes the title of the document after React updates the DOM:
+
+``` js
+import React, {useState, useEffect} from 'react';
+
+function Example () {
+  const [count, setCount] = useState (0);
+
+  // Equivalent to componentDidMount plus componentDidUpdate:
+  useEffect (() => {
+    // Update the title of the document using the browser API
+    document.title = `You clicked $ {count} times`;
+  });
+
+  return (
+    <div>
+      <p> You clicked {count} times </p>
+      <button onClick = {() => setCount (count + 1)}>
+        Click here
+      </button>
+    </div>
+  );
+}
+```
+
+When you call useEffect, you're telling React to run your "effect" function after it updates the DOM. The effects being declared within the component, they have access to its props and its state. By default, React runs the effects after each display, including the first.
+
+##### ✌️ Hook Rules
+
+Hooks are JavaScript functions, but they impose two additional rules:
+
+* Call Hooks only at the root level. Do not call Hooks inside loops, conditional code, or nested functions.
+* Call Hooks only from React component functions. Do not call Hooks from regular JavaScript functions.
+
+We provide an ESLint plugin which ensures compliance with these two rules. We understand that these rules may seem limiting or confusing at first, but they are essential for Hooks to work properly.
+
+#### Quizz
 
 ### React and RESTful API
 
