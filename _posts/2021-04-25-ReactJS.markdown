@@ -534,11 +534,39 @@ ReactDOM.render(
 
 #### Set up a local state
 
-> *construction*
+Let's say the following code is part of a DOM component class.
+
+We initialise a **State** structure as follows.
+
+```js
+state = {
+        value: null,
+        displayValue: '0',
+        operator: null,
+        waitingForOperand: false
+      };
+```
 
 #### Update the local state with setState
 
-> *construction*
+We can then modify the data it contains using various functions.
+
+```js
+clearAll() {
+    this.setState({
+      value: null,
+      displayValue: '0',
+      operator: null,
+      waitingForOperand: false
+    })
+}
+
+clearDisplay() {
+    this.setState({
+      displayValue: '0'
+    })
+}
+```
 
 #### Exercise Build a calculator
 
