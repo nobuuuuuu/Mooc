@@ -530,7 +530,25 @@ ReactDOM.render(
 
 #### Define methods
 
-> *construction*
+You can define methods for your React components that allow you to interact with the entire DOM.
+
+*example*
+
+```js
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  render() {
+    return (
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+    );
+  }
+}
+
+ReactDOM.render(<Header />, document.getElementById('root'));
+```
 
 #### Set up a local state
 
