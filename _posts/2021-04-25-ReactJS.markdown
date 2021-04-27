@@ -521,22 +521,34 @@ ReactDOM.render(
 );
 ```
 
-Test vidéo youtube
-
 <iframe width="560"
         height="315"
-        src="https://www.youtube.com/embed/QH2-TGUlwu4"
+        src="https://www.youtube.com/embed/dtyrPtxi4GY"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen></iframe>
 
 #### Define methods
 
+> *construction*
+
 #### Set up a local state
+
+> *construction*
 
 #### Update the local state with setState
 
+> *construction*
+
 #### Exercise Build a calculator
+
+For this exercise, you will have to develop a calculator in React JS.
+
+The calculator will have numbers from 0 to 9 and the following operators: = + / -.
+
+It will be possible to erase the last digit entered but also to erase the whole data.
+
+*The use of **setState** will be useful for this part.*
 
 More detailed example [here](https://codepen.io/mjijackson/pen/xOzyGX).
 
