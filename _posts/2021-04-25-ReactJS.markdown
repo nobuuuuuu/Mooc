@@ -41,17 +41,6 @@ categories: moocs
 
 ---
 
-Our mooc subject is learning to use React js.  
-React js is an open-source, front end, JavaScript library for building user interfaces or UI components
-
-Through this course, you will have the opportunity to use React JS to create frontend web applications.
-Various exercises will be proposed to you in order to evaluate your progress.
-Most of the training will be practical, there will of course be theory, but we believe that learning by doing is much more effective and it will also allow you to quickly grasp the techniques used in the professional world.
-
-All the tutorials will be offered in a GIT and Code Sand Box format so that you can easily retrieve the code and implement it yourself without the need to install a specific IDE.
-
-If you prefer to use a local tool on your computer, the recommended editors are Visual Studio Code, Notepad ++ or Sublime Text.
-
 ### Introduction to React
 
 #### What is React js?
